@@ -8,8 +8,8 @@ The core process is that the meeting proceeds in the main room, and conflicted r
 
 1. Create a scheduled Zoom meeting in the web UI. While configuring this meeting, click to show options at the bottom of the page, click Breakout Room pre-assign, click "+ Create Rooms", and create a breakout room. The name and content of the room do not matter, all that matters is that there is some breakout room pre-assignment configured. If the breakout room pre-assign option is not available, make sure it is enabled in your personal user settings in Zoom. Note that the person who will be actively managing conflicts in Zoom should be the host of the meeting.
 2. Collect **Zoom account email addresses** of participants. For MLSys we did not do this ahead of time (and instead collected email addresses at the start of the meeting), which was a mistake. Instead, here are several options (which we did not test):
-  - Require registration for the meeting. Combined with authentication as described [here](https://support.zoom.us/hc/en-us/articles/211579443-Scheduling-and-customizing-a-meeting-with-registration), this should force attendees to provide zoom email addresses
-  - Send out forms asking participants to give you zoom email addresses. Note that many people do not know what their zoom email address is.
+    * Require registration for the meeting. Combined with authentication as described [here](https://support.zoom.us/hc/en-us/articles/211579443-Scheduling-and-customizing-a-meeting-with-registration), this should force attendees to provide zoom email addresses
+    * Send out forms asking participants to give you zoom email addresses. Note that many people do not know what their zoom email address is.
 3. Collect conflicts for each paper. If you use the code in this repo, there are stub CSVs provided.
 
 ## At the start of the meeting
