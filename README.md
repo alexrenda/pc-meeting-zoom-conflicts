@@ -12,6 +12,10 @@ The core process is that the meeting proceeds in the main room, and conflicted r
   - Send out forms asking participants to give you zoom email addresses. Note that many people do not know what their zoom email address is.
 3. Collect conflicts for each paper. If you use the code in this repo, there are stub CSVs provided.
 
+## At the start of the meeting
+
+Test the process below, assigning everyone in the meeting to a conflict breakout room. Everyone who is not automatically assigned (i.e., who is left in the main room) has an issue with their setup and must either log into Zoom, or otherwise get their email address recorded.
+
 ## During the meeting
 
 One person (the Zoom meeting host) must manage conflicts. Depending on how fast you go through papers, this may be a full-time job; this should likely be someone who is not planning to participate in discussion.
