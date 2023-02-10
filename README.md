@@ -2,6 +2,8 @@
 
 This guide will discuss handling conflicts during a Zoom-based PC meeting. This is the procedure used during the MLSys 2023 TPC meeting. It is inspired by the set of scripts [here](https://github.com/emeryberger/PC-Resources/tree/master/PC-meeting-scripts).
 
+The core process is that the meeting proceeds in the main room, and conflicted reviewers are brought into and taken out of a Conflict breakout room.
+
 ## Pre-meeting setup
 
 1. Create a scheduled Zoom meeting in the web UI. While configuring this meeting, click to show options at the bottom of the page, click Breakout Room pre-assign, click "+ Create Rooms", and create a breakout room. The name and content of the room do not matter, all that matters is that there is some breakout room pre-assignment configured. If the breakout room pre-assign option is not available, make sure it is enabled in your personal user settings in Zoom. Note that the person who will be actively managing conflicts in Zoom should be the host of the meeting.
@@ -34,3 +36,13 @@ Note that the conflict manager can run steps 1-4 while discussing the previous p
 - Zoom limits breakout room assignments to 200 people. If your meeting exceeds this, you may not be able to run automatic assignments.
 - Attendees without zoom email addresses (e.g., those calling in) cannot be automatically assigned, and must be handled manually.
 - Zoom messages become a poor way of communicating, since they are lost upon switching to/from a breakout room.
+
+
+# Code in this repo
+
+This repo also provides code and stubs for generating CSV files:
+- `Meeting.ipynb` serves as a dashboard for managing the meeting, in which you can associate reviewers with email addresses, and generate CSVs to upload to zoom.
+- `meeting.py`, providing the backend for `Meeting.ipynb`
+- `conflicts.csv`, which is a CSV with each row representing a conflict for a given paper
+- `reviewers.csv`, which is a CSV with each row representing a mapping from a reviewer name to a reviewer email. The meeting software essentially treats this as a database, continually reading from and appending to it. A given reviewer can have multiple entries in this database, representing for example distinct CMT and Zoom email addresses, or multiple Zoom email addresses. In the case of exceeding the 200 person breakout room assignment, later email addresses for a given reviewer are considered fresher.
+- `ignore.csv`, which is a csv with reviewer names that should not be automatically assigned to breakout rooms (i.e., those running the PC meeting).
